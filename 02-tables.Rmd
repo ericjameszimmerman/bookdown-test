@@ -1,0 +1,23 @@
+# Tables {#tables}
+
+## Basic Markdown Tables
+
+|                  |  mpg| cyl| disp|  hp|
+|:-----------------|----:|---:|----:|---:|
+|Mazda RX4         | 21.0|   6|  160| 110|
+|Mazda RX4 Wag     | 21.0|   6|  160| 110|
+|Datsun 710        | 22.8|   4|  108|  93|
+|Hornet 4 Drive    | 21.4|   6|  258| 110|
+|Hornet Sportabout | 18.7|   8|  360| 175|
+|Valiant           | 18.1|   6|  225| 105|
+
+## Table data from CSV
+```{r, echo=FALSE, message=FALSE}
+d = readr::read_csv("extdata/gis-vs-gds-table.csv")
+knitr::kable(x = d, 
+             caption = paste("Differences in emphasis between software", 
+                             "packages (Graphical User Interface (GUI) of", 
+                             "Geographic Information Systems (GIS) and R)."),
+             caption.short = "Differences between GUI and CLI",
+             booktabs = TRUE)
+```

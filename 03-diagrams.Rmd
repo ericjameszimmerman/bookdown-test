@@ -1,0 +1,70 @@
+# Diagrams and Charts {#diagrams}
+
+```{r message=FALSE, echo=FALSE, purl=FALSE}
+# Packages needed internally, but not in book.
+library(dplyr)
+library(gapminder)
+library(kableExtra)
+library(readr)
+library(patchwork)
+library(scales)
+library(stringr)
+```
+
+There are a number of methods for adding charts and diagrams.
+
+## Inline Graphviz diagrams with DiagrammeR
+
+``` {r, echo = FALSE}
+library(DiagrammeR)
+DiagrammeR::grViz("digraph {
+  graph [layout = dot, rankdir = TB]
+  
+  node [shape = rectangle]        
+  rec1 [label = 'Step 1. Wake up']
+  rec2 [label = 'Step 2. Write code']
+  rec3 [label =  'Step 3. ???']
+  rec4 [label = 'Step 4. PROFIT']
+  
+  # edge definitions with the node IDs
+  rec1 -> rec2 -> rec3 -> rec4
+  }",
+  height = 500)
+```
+
+## Histogram from CSV data
+
+``` {r, fig.cap = 'Histogram from CSV', eval = TRUE, echo = FALSE}
+# Libraries
+library(tidyverse)
+
+# Load dataset from github
+data <- read.table("extdata/histogram1.csv", header=TRUE)
+
+# plot
+p <- data %>%
+  filter( price<300 ) %>%
+  ggplot( aes(x=price)) +
+    geom_histogram( binwidth=3, fill="#69b3a2", color="#e9ecef", alpha=0.9) +
+    ggtitle("Bin size = 3")
+#p
+```
+
+## Basic line chart with ggplot2 and geom_line()
+
+``` {r, fig.cap = 'Basic line chart with ggplot2 and geom_line()', eval = TRUE, echo = FALSE}
+# Libraries
+library(ggplot2)
+
+# create data
+xValue <- 1:10
+yValue <- cumsum(rnorm(10))
+data <- data.frame(xValue,yValue)
+
+# Plot
+ggplot(data, aes(x=xValue, y=yValue)) +
+  geom_line()
+```
+
+## Summary
+summary

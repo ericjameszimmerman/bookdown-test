@@ -1,0 +1,49 @@
+Package: bookdown-test
+Title: Bookdown Testing
+Version: 0.0.1.9000
+Authors@R: 
+    c(person(given = "Eric",
+             family = "Zimmerman",
+             role = c("aut", "cre"),
+             email = "ericjzim@gmail.com"),
+      person(given = "Another Person",
+             family = "Other",
+             role = "aut",
+             email = "noreply@gmail.com"))
+Depends: 
+    R (>= 3.3.0)
+Imports:
+    bookdown,
+    dplyr,
+    forcats,
+    ggforce,
+    ggplot2,
+    ggraph,
+    gutenbergr,
+    igraph,
+    janeaustenr,
+    jsonlite,
+    lubridate,
+    mallet,
+    Matrix,
+    quanteda,
+    readr,
+    reshape2,
+    sessioninfo,
+    stringr,
+    styler,
+    textdata,
+    tidyr,
+    tidytext,
+    tidyverse,
+    tm,
+    topicmodels,
+    widyr,
+    wordcloud,
+    XML
+Suggests:
+    bslib,
+    downlit,
+    xml2
+Remotes: ropensci/gutenbergr
+Encoding: UTF-8

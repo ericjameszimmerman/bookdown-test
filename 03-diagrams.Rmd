@@ -32,24 +32,6 @@ DiagrammeR::grViz("digraph {
   height = 500)
 ```
 
-## Histogram from CSV data
-
-```{r, fig.cap = 'Histogram from CSV', eval = TRUE, echo = FALSE}
-# Libraries
-library(tidyverse)
-
-# Load dataset from github
-data <- read.table("extdata/histogram1.csv", header=TRUE)
-
-# plot
-p <- data %>%
-  filter( price<300 ) %>%
-  ggplot( aes(x=price)) +
-    geom_histogram( binwidth=3, fill="#69b3a2", color="#e9ecef", alpha=0.9) +
-    ggtitle("Bin size = 3")
-#p
-```
-
 ## Basic line chart with ggplot2 and geom line
 
 ```{r, fig.cap = 'Basic line chart with ggplot2 and geom line', eval = TRUE, echo = FALSE}

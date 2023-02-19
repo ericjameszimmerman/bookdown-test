@@ -16,8 +16,6 @@ bookdown::gitbook:
         <li><a href="./">Bookdown Test</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit:
-      link: https://github.com/ericjameszimmerman/bookdown-test
   includes:
     in_header: _includes/analytics.html
 

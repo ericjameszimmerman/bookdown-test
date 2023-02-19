@@ -15,7 +15,6 @@ knitr::opts_chunk$set(
 )
 
 options(crayon.enabled = FALSE)
-
 suppressPackageStartupMessages(library(tidyverse))
 theme_set(theme_light())
 

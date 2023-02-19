@@ -3,7 +3,7 @@ bookdown::bs4_book:
     primary: "#5b7886"
     base_font:
       google: Roboto
-  repo: https://github.com/dgrtwo/tidy-text-mining
+  repo: https://github.com/ericjameszimmerman/bookdown-test
   includes:
     in_header: _includes/analytics.html
 
@@ -13,11 +13,11 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li><a href="./">Text Mining with R</a></li>
+        <li><a href="./">Bookdown Test</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit:
-      link: https://github.com/dgrtwo/tidy-text-mining/edit/master/%s
+      link: https://github.com/ericjameszimmerman/bookdown-test
   includes:
     in_header: _includes/analytics.html
 

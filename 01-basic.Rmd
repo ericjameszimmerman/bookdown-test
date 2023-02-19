@@ -34,7 +34,7 @@ You can also add inline *italics*!
 Here is some `inline code`.
 
 #### R Text
-```{r text}
+```{r text, echo=FALSE, message=FALSE}
 text <- c("Because I could not stop for Death -",
           "He kindly stopped for me -",
           "The Carriage held but just Ourselves -",

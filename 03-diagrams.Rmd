@@ -15,7 +15,7 @@ There are a number of methods for adding charts and diagrams.
 
 ## Inline Graphviz diagrams with DiagrammeR
 
-``` {r, echo = FALSE}
+```{r, echo = FALSE}
 library(DiagrammeR)
 DiagrammeR::grViz("digraph {
   graph [layout = dot, rankdir = TB]
@@ -34,7 +34,7 @@ DiagrammeR::grViz("digraph {
 
 ## Histogram from CSV data
 
-``` {r, fig.cap = 'Histogram from CSV', eval = TRUE, echo = FALSE}
+```{r, fig.cap = 'Histogram from CSV', eval = TRUE, echo = FALSE}
 # Libraries
 library(tidyverse)
 
@@ -50,20 +50,16 @@ p <- data %>%
 #p
 ```
 
-## Basic line chart with ggplot2 and geom_line()
+## Basic line chart with ggplot2 and geom line
 
-``` {r, fig.cap = 'Basic line chart with ggplot2 and geom_line()', eval = TRUE, echo = FALSE}
-# Libraries
+```{r, fig.cap = 'Basic line chart with ggplot2 and geom line', eval = TRUE, echo = FALSE}
 library(ggplot2)
 
-# create data
 xValue <- 1:10
 yValue <- cumsum(rnorm(10))
 data <- data.frame(xValue,yValue)
 
-# Plot
-ggplot(data, aes(x=xValue, y=yValue)) +
-  geom_line()
+ggplot(data, aes(x=xValue, y=yValue)) + geom_line()
 ```
 
 ## Summary
